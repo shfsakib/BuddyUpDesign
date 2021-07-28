@@ -14,7 +14,7 @@ const FitnessList = () => {
                         <div className="col-12 pb-5">
                             <div className='row row-cols-3 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 row-cols-xl-6 big-deal-div pt-3 product-list-grid'>
                                 <div className='col'>
-                                    <div className=''>
+                                    <div className='text-center'>
                                         <img
                                             className='deal-image'
                                             src={'/asset/nike.png'}
@@ -23,7 +23,7 @@ const FitnessList = () => {
                                     </div>
                                 </div>
                                 <div className='col'>
-                                    <div className=''>
+                                    <div className='text-center'>
                                         <img
                                             className='deal-image'
                                             src={'/asset/adidas.png'}
@@ -32,7 +32,7 @@ const FitnessList = () => {
                                     </div>
                                 </div>
                                 <div className='col'>
-                                    <div className=''>
+                                    <div className='text-center'>
                                         <img
                                             className='deal-image'
                                             src={'/asset/UA.png'}
@@ -41,7 +41,7 @@ const FitnessList = () => {
                                     </div>
                                 </div>
                                 <div className='col'>
-                                    <div className=''>
+                                    <div className='text-center mt-5 mt-lg-0'>
                                         <img
                                             className='deal-image'
                                             src={'/asset/google.png'}
@@ -50,7 +50,7 @@ const FitnessList = () => {
                                     </div>
                                 </div>
                                 <div className='col'>
-                                    <div className=''>
+                                    <div className='text-center mt-5 mt-lg-0'>
                                         <img
                                             className='deal-image'
                                             src={'/asset/runkeeper.png'}
@@ -59,7 +59,7 @@ const FitnessList = () => {
                                     </div>
                                 </div>
                                 <div className='col'>
-                                    <div className=''>
+                                    <div className='text-center mt-5 mt-lg-0'>
                                         <img
                                             className='deal-image'
                                             src={'/asset/strava.png'}

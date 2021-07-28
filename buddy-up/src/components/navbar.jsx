@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <Fragment>
             <header>
-                <div className="container mr-5 pt-2">
+                <div className="container pr-5 pt-2">
                     <div className="row">
                         <div className="header-logo">
                             <a href="index.html" className="ml-3">

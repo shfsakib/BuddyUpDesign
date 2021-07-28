@@ -3,8 +3,8 @@ import React, { Fragment } from 'react'
 const Price = () => {
     return (
         <Fragment>
-            <section id="pricing">
-                <div className="container pt-1 mt-2">
+            <section id="pricing" className="pb-5">
+                <div className="container pt-1 mt-2 pb-5">
                     <div className="row p-3">
                         <div className="col-12 pb-3 text-center">
                             <h1 className="font-weight-bolder p-4">Choose Your Plan From The App Store</h1>
