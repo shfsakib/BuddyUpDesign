@@ -55,9 +55,9 @@ header {
 .header-logo a img {
   max-width: 200px;
   max-height: 50px;
-  height: auto;
+  height: auto!important;
   width: auto;
-  top: 0px;
+  top: 0px!important;
   position: relative;
 }
 
@@ -405,12 +405,100 @@ header .header-right > ul > li > a:hover {
   font-weight: 700 !important;
 }
 /* partner */
-.partner-bg { 
-    max-height: 270px;
+.partner-bg {
+  max-height: 270px;
 }
-.partner-bg img{
-    height: 100%;
-    width: 100%;
+.partner-bg img {
+  height: 100%;
+  width: 100%;
+}
+.open-quoto {
+  color: var(--primary-color);
+  content: open-quote;
+  font-size: 150px;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+  margin-top: 25px;
+}
+.open-quoto::before {
+  position: absolute;
+  left: 0;
+  top: 25px;
+  margin-top: 40px;
+}
+.open-quoto::after {
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+  margin-top: 40px;
+}
+.team-quoto {
+  font-size: 20px !important ;
+  color: var(--color-4a4a4a) !important;
+  font-style: italic !important;
+  font-weight: 100 !important;
+  padding: 0px 10px;
+  line-height: 30px !important;
+  margin-left: 60px;
+}
+.left-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 15px;
+  opacity: 0.7;
+}
+.right-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 15px;
+  opacity: 0.7;
+}
+.center-pic {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+}
+.team-pic {
+  cursor: pointer;
+}
+.team-pic:hover {
+  opacity: 1;
+}
+.team-bio {
+  width: auto;
+  text-align: center;
+  font-weight: 100;
+}
+.team-bio h4 {
+  font-weight: bolder;
+  margin-top: 10px;
+}
+.team-bio .title {
+  display: none;
+}
+.getbg {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+.get-title {
+  position: absolute;
+  top: 100px;
+  right: 30px;
+}
+.get-title h1{
+  font-size: 50px;
+}
+.footer-text{
+  font-weight: 100!important;
+  margin-top: 40px; 
+  line-height: 40px;
+  color: #868686;
 }
 /* media query start */
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -434,7 +522,7 @@ header .header-right > ul > li > a:hover {
   }
   /*menu btn*/
   .menu-btn {
-    top: 2.5rem;
+    top: 2rem;
   }
   /*making responsive menu*/
   header .header-right {
@@ -505,6 +593,13 @@ header .header-right > ul > li > a:hover {
     box-shadow: none;
     margin: 30px 0 0 0;
   }
+  .getbg {
+    width: 60%;
+  }
+  .get-title h1{
+    text-shadow:2px 2px #495057;
+    font-size: 25px;
+  }
 }
 /* media query end */
 /* scrollbar */
@@ -531,4 +626,7 @@ header .header-right > ul > li > a:hover {
 }
 .bg-FEFBFB {
   background: #fefbfb !important;
+}
+.bg-red {
+  background: #ff4438 !important;
 }
