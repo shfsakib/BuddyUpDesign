@@ -3,8 +3,8 @@ const Benefit = () => {
     return (
         <Fragment>
             <section>
-                <div className="row mr-0 pt-3 pb-4 pr-0">
-                    <div className="col-lg-7 pl-benifit text-left">
+                <div className="row mr-0 pt-3 pb-0 pr-0">
+                    <div className="col-lg-7 h-75 pl-benifit text-left">
                         <div className="row">
                             <div className="col-12 h-50 pt-4">
                                 <h1 className="font-weight-bolder pb-5 mt-4">Our Benefits</h1>
@@ -33,7 +33,7 @@ const Benefit = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-5 p-0">
+                    <div className="col-lg-5 p-0 benefit-img-bg">
                         <img src={'/asset/bg1.png'} className="w-100 h-100" />
                     </div>
                 </div>

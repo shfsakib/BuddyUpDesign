@@ -19,13 +19,28 @@ const Team = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-12 pt-5 pb-5 d-flex justify-content-center">
-                            <span className="team-bio"><img src={'/asset/grp-left.png'} className="left-pic team-pic" />
+                        <div className="col-12 pt-2 pb-5 d-flex justify-content-center team-members">
+                            {/* <span className="team-bio"><img src={'/asset/grp-left.png'} className="left-pic team-pic" />
                                 <span className="title"> <h4 className="font-weight-bold">Joey Hext</h4>Co-Founder</span></span>
                             <span className="team-bio"><img src={'/asset/grp.png'} className="center-pic team-pic" />
                                 <span className="title"><h4 className="font-weight-bold">John Haakon Chen</h4>Co-Founder</span></span>
                             <span className="team-bio"> <img src={'/asset/grp-left.png'} className="right-pic team-pic" />
-                                <span className="title"><h4 className="font-weight-bold">Grey John</h4>CTO</span></span>
+                                <span className="title"><h4 className="font-weight-bold">Grey John</h4>CTO</span></span> */}
+                            <div className="card-carousel">
+                                
+                                <div className="my-card text-center" >
+                                    <span className="team-bio"><img src={'/asset/grp-left.png'} className="left-pic team-pic" />
+                                        <span className="title"> <h4 className="font-weight-bold">Joey Hext</h4>Co-Founder</span></span></div>
+                                <div className="my-card text-center" >
+                                    <span className="team-bio"><img src={'/asset/grp.png'} className="center-pic team-pic" />
+                                        <span className="title"><h4 className="font-weight-bold">John Haakon Chen</h4>Co-Founder</span></span>
+                                </div>
+                                <div className="my-card  text-center" >
+                                    <span className="team-bio"><img src={'/asset/grp-left.png'} className="left-pic team-pic" />
+                                        <span className="title"><h4 className="font-weight-bold">Grey John</h4>CTO</span></span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

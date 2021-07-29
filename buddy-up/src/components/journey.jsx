@@ -9,14 +9,14 @@ const Journey = () => {
                 <div className="container pb-100">
                     <div className="row p-3">
                         <div className="col-lg-6 text-center pt-lg-5">
-                            <img src={'/asset/FlatiPhone.png'} className="journey-img" />
+                            <img src={'/asset/FlatiPhone.svg'} className="journey-img" />
                         </div>
                         <div className="col-lg-6">
                             <div className="row">
                                 <div className="col-12 pt-4">
                                     <h1 className="font-weight-bolder mt-5">Start Your Journey</h1>
                                 </div>
-                                <div className="col-4">
+                                <div className="col-4 journey">
                                     <div className="round-number first">1</div>
                                     <div className="round-number second">2</div>
                                     <div className="round-number third">3</div>
