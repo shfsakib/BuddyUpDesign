@@ -18,8 +18,9 @@ const Index = () => {
             <FitnessList/>
             <Benefit/>
             <Journey/>
-            <Price/>
-            <Partner/>
+            {/*  <Price/> */}
+           
+            {/* <Partner/> */}
             <Team/>
             <GetApp/>
             <Footer/>

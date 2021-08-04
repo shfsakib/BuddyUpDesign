@@ -10,7 +10,7 @@ const Footer = () => {
                             <img src="/asset/redlogo.png" />
                         </div>
                         <div className="col-12 pt-4 text-center">
-                            <h4 className="color-4F4F4F w-75 m-auto footer-text">BuddyUp is matchmaking fitness app for runners to find,<br /> like and match with nearby training partners.</h4>
+                            <h4 className="color-4F4F4F footer-text">BuddyUp is matchmaking fitness app for runners to find, like and match with nearby training partners.</h4>
                         </div>
                         <div className="col-12 text-center pt-5 pb-4">
                             <img src="/asset/twitter.png" className="m-3" />

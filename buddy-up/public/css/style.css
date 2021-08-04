@@ -32,6 +32,7 @@ body {
   padding: 0;
   scroll-behavior: smooth;
   font-family: "Railway", sans-serif;
+  overflow-x: hidden;
 }
 .container {
   max-width: 1350px !important;
@@ -65,7 +66,7 @@ header {
   max-height: 50px;
   height: auto !important;
   width: auto;
-  top: 0px !important;
+  top: 0px;
   position: relative;
 }
 
@@ -90,7 +91,9 @@ header .header-right > ul {
   border-radius: 50%;
   background: none;
 }
-
+.header-div {
+  padding: 20px 50px;
+}
 .menu-nav li img:hover {
   background: none !important;
 }
@@ -137,9 +140,6 @@ header .header-right > ul > li > a:hover {
   font-weight: 700 !important;
 }
 
-.active {
-  /* border-bottom: 3px solid var(--secondary-color); */
-}
 /*menu button design start*/
 
 .menu-btn {
@@ -233,7 +233,7 @@ header .header-right > ul > li > a:hover {
 }
 .wave-section .container {
   padding-top: 50px;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
 }
 .root-title {
   font-weight: 700;
@@ -404,7 +404,10 @@ header .header-right > ul > li > a:hover {
   width: 100px;
 }
 .pb-100 {
-  padding-bottom: 0px !important;
+  padding-bottom: 100px !important;
+}
+.pb-50 {
+  padding-bottom: 50px !important;
 }
 .btn-red {
   width: auto;
@@ -499,18 +502,46 @@ header .header-right > ul > li > a:hover {
   min-height: 300px;
 }
 .get-title {
-  position: absolute;
+  position: relative;
   top: 100px;
-  right: 30px;
 }
-.get-title h1 {
+
+/* team anime css */
+#container {
+  width: 200px;
+  height: 400px;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+#container div {
+  position: absolute;
+  width: 100px;
+  margin: 10px;
+  background: #ff00ab;
+  padding: 5px;
+  border-radius: 3px;
+  text-align: center;
+  display: inline-block;
+}
+#container div:nth-child(1){
+  left: 14.296875px;
+}
+#container div:nth-child(2){
+  left: 120.09375px;
+}
+#container div:nth-child(3){
+  left: 224.890625px;
+}
+/* .get-title h1 {
   font-size: 50px;
-}
+} */
 .footer-text {
   font-weight: 100 !important;
-  margin-top: 40px;
+  margin: 40px auto;
   line-height: 40px;
   color: #868686;
+  width: 75%;
 }
 /* media query start */
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -518,19 +549,20 @@ header .header-right > ul > li > a:hover {
     padding-bottom: 200px !important;
   }
 }
-@media screen and (min-width: 0) and (max-width: 768px) {
+@media screen and (min-width: 0) and (max-width: 992px) {
   /*container design change*/
   header {
     min-height: 80px;
   }
-  header .container {
+  /* header .container {
     padding: 0;
     margin: 0 20px;
-  }
+  } */
   /*header*/
   .header-logo img {
     height: 50px !important;
-    top: -15px !important;
+    width: 85px !important;
+    top: 5px !important;
   }
   /*menu btn*/
   .menu-btn {
@@ -544,6 +576,31 @@ header .header-right > ul > li > a:hover {
     width: 100vw;
     opacity: 0.98;
     visibility: hidden;
+  }
+  .header-div {
+    text-align: center;
+    padding: 20px !important;
+  }
+  .root-title {
+    margin-top: 40px !important;
+    font-size: 35px !important;
+  }
+  .sub-title {
+    color: white;
+    font-size: 18px;
+  }
+  .app-button-div {
+    text-align: center !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .app-button-div span {
+    margin: 25px auto;
+    display: block !important;
+  }
+  .wave-bg {
+    max-width: 300px;
+    max-height: 360px;
   }
   .opennav {
     visibility: visible !important;
@@ -605,9 +662,93 @@ header .header-right > ul > li > a:hover {
     box-shadow: none;
     margin: 30px 0 0 0;
   }
-  .get-title h1 {
+  /* .get-title h1 {
     text-shadow: 2px 2px #495057;
     font-size: 25px;
+  } */
+  .journey-img {
+    height: 400px;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .round-number-sm {
+    width: 60px !important;
+    height: 60px !important;
+    padding: 10px 10px;
+    font-size: 25px;
+    margin: 0 auto !important;
+    background: #fff;
+    border: 1px solid #ff4438;
+    color: #ff4438;
+    border-radius: 50%;
+  }
+  .round-number-sm:hover,
+  .round-number-sm:active,
+  .round-number-sm:focus {
+    background: #ff4438;
+    color: #fff;
+    font-style: italic;
+  }
+  .arrowButton {
+    background: red;
+    color: #fff;
+    padding: 10px 15px;
+    position: absolute;
+    top: 525px;
+    border-radius: 5px;
+  }
+  .benifit-header {
+    font-size: 30px !important;
+  }
+  .journey-p {
+    font-size: 18px;
+    margin: 30px auto;
+  }
+  .pb-100 {
+    padding-bottom: 50px !important;
+  }
+  .open-quoto {
+    font-size: 120px;
+  }
+  .open-quoto::before {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    margin-top: 40px;
+  }
+  .open-quoto::after {
+    position: absolute;
+    right: 12px;
+    bottom: -20px;
+    margin-top: 40px;
+  }
+  .team-quoto {
+    margin-left: 35px;
+    line-height: 25px;
+    font-size: 18px;
+  }
+  .top-order {
+    order: 1;
+    padding-right: 0 !important;
+  }
+  .bottom-order {
+    order: 2;
+    min-height: 500px;
+    background: url("/asset/partner-sm.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    margin-top: 0px;
+    background-position: left;
+  }
+  .get-title h1 {
+    font-size: 30px;
+    width: 75%;
+    margin: 0 auto;
+  }
+  .footer-text {
+    font-size: 20px;
+    margin: 10px auto;
+    width: 100% !important;
   }
 }
 /* media query end */

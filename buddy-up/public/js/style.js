@@ -3,14 +3,48 @@ $(document).ready(function () {
     $('.journey-img').attr('src', '/asset/FlatiPhone2.svg')
     $('.center-pic').parent().children('.title').css('display', 'block');
 
+    var animating = false;
+    var left = $('#container div:nth-child(1)');
+    var mid = $('#container div:nth-child(2)');
+    var right = $('#container div:nth-child(3)');
+
+    var leftdistance = left.offset().left;
+    var middistance = mid.offset().left;
+    var rightdistance = right.offset().left;
+    console.log(leftdistance, middistance, rightdistance);
+
+    $('.move').on('click', function () {
+        var className = $(this).index() + 1;
+        console.log(className);
+        // if (className === 1) {
+            // left.animate({
+            //     left: middistance
+            // }, 600);
+            left.addClass('midpos');
+            left.removeClass('leftpos');
+            // right.animate({
+            //     left: leftdistance
+            // }, 600);
+            right.addClass('leftpos');
+            right.removeClass('rightpos');
+            // mid.animate({
+            //     left: rightdistance
+            // }, 600);
+            mid.addClass('rightpos');
+            mid.removeClass('midPos');
+        // }
+        
+         
+    });
+
     var round = $('.round-number');
     round.mouseover(function () {
         round.removeClass('active');
         $(this).addClass('active');
-    }) 
+    })
     $('.team-pic').click(function () {
-        $('.team-pic').css({ "width": "80px", "height": "80px", "margin-top": "15px", "opacity": "0.7","transition": "0.3s" })
-        $(this).css({ "width": "125px", "height": "125px", "margin-top": "0px", "opacity": "1","transition": "0.3s" })
+        $('.team-pic').css({ "width": "80px", "height": "80px", "margin-top": "15px", "opacity": "0.7", "transition": "0.3s" })
+        $(this).css({ "width": "125px", "height": "125px", "margin-top": "0px", "opacity": "1", "transition": "0.3s" })
         if ($(this).hasClass('left-pic')) {
             $('.team-quoto').text('Once lockdown stuck and I\'d done several 500 piece puzzles, baked multiple varieties of cookies and had enough quizzes on zoom calls with friends. I realised I should probably go and do some exercise, only I had to do it all alone and there wasn\'t a weight in sight. I\'v always been keen on exercise and as a practicing physio. I\'m keen to get as many people as possible doing more of it.')
             // $('.team-bio .title').css('display', 'none');

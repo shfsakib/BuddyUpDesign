@@ -6,8 +6,8 @@ const Team = () => {
             <section>
                 <div className="container">
 
-                    <div className="row pt-5 pb-5">
-                        <div className="col-12 text-center pt-5 pb-5">
+                    <div className="row pt-lg-5 pb-lg-5">
+                        <div className="col-12 text-center pt-lg-0 pb-lg-2 pb-3">
                             <h1 className="font-weight-bolder">Meet Our Team</h1>
                         </div>
                     </div>
@@ -19,7 +19,7 @@ const Team = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-12 pt-2 pb-5 d-flex justify-content-center team-members">
+                        <div className="col-12 pt-5 pb-5 d-flex justify-content-center team-members">
                             {/* <span className="team-bio"><img src={'/asset/grp-left.png'} className="left-pic team-pic" />
                                 <span className="title"> <h4 className="font-weight-bold">Joey Hext</h4>Co-Founder</span></span>
                             <span className="team-bio"><img src={'/asset/grp.png'} className="center-pic team-pic" />
@@ -27,21 +27,28 @@ const Team = () => {
                             <span className="team-bio"> <img src={'/asset/grp-left.png'} className="right-pic team-pic" />
                                 <span className="title"><h4 className="font-weight-bold">Grey John</h4>CTO</span></span> */}
                             <div className="card-carousel">
-                                
                                 <div className="my-card text-center" >
                                     <span className="team-bio"><img src={'/asset/grp-left.png'} className="left-pic team-pic" />
-                                        <span className="title"> <h4 className="font-weight-bold">Joey Hext</h4>Co-Founder</span></span></div>
+                                        <span className="title"> <h4 className="font-weight-bold mt-2">Joey Hext</h4>Co-Founder</span></span></div>
                                 <div className="my-card text-center" >
                                     <span className="team-bio"><img src={'/asset/grp.png'} className="center-pic team-pic" />
-                                        <span className="title"><h4 className="font-weight-bold">John Haakon Chen</h4>Co-Founder</span></span>
+                                        <span className="title"><h4 className="font-weight-bold mt-2">John Haakon Chen</h4>Co-Founder</span></span>
                                 </div>
                                 <div className="my-card  text-center" >
                                     <span className="team-bio"><img src={'/asset/grp-left.png'} className="left-pic team-pic" />
-                                        <span className="title"><h4 className="font-weight-bold">Grey John</h4>CTO</span></span>
+                                        <span className="title"><h4 className="font-weight-bold mt-2">Tom Jerry</h4>CTO</span></span>
                                 </div>
                             </div>
 
                         </div>
+                        <div classname="col-12">
+                            <div id="container">
+                                <div id="one" className="move left leftpos">div 1</div>
+                                <div id="two" className="move mid midpos">div 2</div>
+                                <div id="three" className="move right rightpos">div 3</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
