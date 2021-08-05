@@ -4,37 +4,85 @@ $(document).ready(function () {
     $('.center-pic').parent().children('.title').css('display', 'block');
 
     var animating = false;
-    var left = $('#container div:nth-child(1)');
-    var mid = $('#container div:nth-child(2)');
-    var right = $('#container div:nth-child(3)');
+    $('.leftDiv').css('left','0');
+    $('.midDiv').css('left','auto');
+    $('.rightDiv').css('right','0');
 
-    var leftdistance = left.offset().left;
-    var middistance = mid.offset().left;
-    var rightdistance = right.offset().left;
-    console.log(leftdistance, middistance, rightdistance);
-
+    var leftPos = "0";
+    var midPos = "auto";
+    var rightPos = "0";
+    console.log(leftPos, midPos, rightPos);
     $('.move').on('click', function () {
-        var className = $(this).index() + 1;
+        var className = $(this).attr('class')
         console.log(className);
-        // if (className === 1) {
-            // left.animate({
-            //     left: middistance
-            // }, 600);
-            left.addClass('midpos');
-            left.removeClass('leftpos');
-            // right.animate({
-            //     left: leftdistance
-            // }, 600);
-            right.addClass('leftpos');
-            right.removeClass('rightpos');
-            // mid.animate({
-            //     left: rightdistance
-            // }, 600);
-            mid.addClass('rightpos');
-            mid.removeClass('midPos');
-        // }
-        
-         
+        if ($(this).hasClass('leftDiv')) {
+            $('.leftDiv').css({
+                "left": midPos,
+                "transition":"0.3s"
+
+            }) 
+            $('.midDiv').animate({
+                "right": rightPos
+            }, 600)
+            $('.rightDiv').animate({
+                "left": leftPos
+            }, 600)
+            $('#container div img').css({ "width": "120px", "height": "120px" })
+            $('.leftDiv img').css({ "width": "150px", "height": "150px" })
+            $('.leftDiv').addClass("leftDivPos")
+            $('.midDiv').addClass("midDivPos")
+            $('.rightDiv').addClass("rightDivPos")
+
+            $('.leftDivPos').addClass("midDiv")
+            $('.leftDivPos').removeClass("leftDiv")
+            $('.leftDivPos').removeClass("leftDivPos")
+
+            $('.midDivPos').addClass("rightDiv")
+            $('.midDivPos').removeClass("midDiv")
+            $('.midDivPos').removeClass("midDivPos")
+
+            $('.rightDivPos').addClass("leftDiv")
+            $('.rightDivPos').removeClass("rightDiv")
+            $('.rightDivPos').removeClass("rightDivPos")
+            $(this).css('right','auto');
+            
+
+        }
+        else if ($(this).hasClass('rightDiv')) {
+            $('.rightDiv').css({
+                "left": midPos,
+                "transition":"0.3s"
+            })
+            $('.midDiv').animate({
+                "left": leftPos
+            }, 600)
+            $('.leftDiv').animate({
+                "right": rightPos
+            }, 600)
+            $('.leftDiv').css('left',''); 
+            $('.rightDiv').css('right',''); 
+            //
+            $('#container div img').css({ "width": "120px", "height": "120px" })
+            $('.rightDiv img').css({ "width": "150px", "height": "150px" })
+            $('.leftDiv').addClass("leftDivPos")
+            $('.midDiv').addClass("midDivPos")
+            $('.rightDiv').addClass("rightDivPos")
+
+            $('.rightDivPos').addClass("midDiv")
+            $('.rightDivPos').removeClass("rightDiv")
+            $('.rightDivPos').removeClass("rightDivPos")
+
+            $('.midDivPos').addClass("leftDiv")
+            $('.midDivPos').removeClass("midDiv")
+            $('.midDivPos').removeClass("midDivPos")
+
+            $('.leftDivPos').addClass("rightDiv")
+            $('.leftDivPos').removeClass("leftDiv")
+            $('.leftDivPos').removeClass("rightDivPos")
+            
+
+
+        }
     });
 
     var round = $('.round-number');
@@ -42,23 +90,23 @@ $(document).ready(function () {
         round.removeClass('active');
         $(this).addClass('active');
     })
-    $('.team-pic').click(function () {
-        $('.team-pic').css({ "width": "80px", "height": "80px", "margin-top": "15px", "opacity": "0.7", "transition": "0.3s" })
-        $(this).css({ "width": "125px", "height": "125px", "margin-top": "0px", "opacity": "1", "transition": "0.3s" })
-        if ($(this).hasClass('left-pic')) {
-            $('.team-quoto').text('Once lockdown stuck and I\'d done several 500 piece puzzles, baked multiple varieties of cookies and had enough quizzes on zoom calls with friends. I realised I should probably go and do some exercise, only I had to do it all alone and there wasn\'t a weight in sight. I\'v always been keen on exercise and as a practicing physio. I\'m keen to get as many people as possible doing more of it.')
-            // $('.team-bio .title').css('display', 'none');
-            // $(this).parent().children('.title').css({'display':'block',"transition": "0.3s"});
-        } else if ($(this).hasClass('right-pic')) {
-            $('.team-quoto').text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venium, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non priodent.')
-            // $('.team-bio .title').css('display', 'none');
-            // $(this).parent().children('.title').css({'display':'block',"transition": "0.3s"});
-        } else {
-            $('.team-quoto').text('Keen runner, cross-country skier and mad about all things tech! Competed already in one ski ultra-marathon and have a trail-running marathon coming up next July in Norway. Been working in startups and tech for the last few years and really want to create something that helps the everyday runner or cyclist get fitter and make new friends!')
-            // $('.team-bio .title').css('display', 'none');
-            // $(this).parent().children('.title').css({'display':'block',"transition": "0.3s"});
-        }
-    })
+    // $('.team-pic').click(function () {
+    //     $('.team-pic').css({ "width": "80px", "height": "80px", "margin-top": "15px", "opacity": "0.7", "transition": "0.3s" })
+    //     $(this).css({ "width": "125px", "height": "125px", "margin-top": "0px", "opacity": "1", "transition": "0.3s" })
+    //     if ($(this).hasClass('left-pic')) {
+    //         $('.team-quoto').text('Once lockdown stuck and I\'d done several 500 piece puzzles, baked multiple varieties of cookies and had enough quizzes on zoom calls with friends. I realised I should probably go and do some exercise, only I had to do it all alone and there wasn\'t a weight in sight. I\'v always been keen on exercise and as a practicing physio. I\'m keen to get as many people as possible doing more of it.')
+    //         // $('.team-bio .title').css('display', 'none');
+    //         // $(this).parent().children('.title').css({'display':'block',"transition": "0.3s"});
+    //     } else if ($(this).hasClass('right-pic')) {
+    //         $('.team-quoto').text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venium, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non priodent.')
+    //         // $('.team-bio .title').css('display', 'none');
+    //         // $(this).parent().children('.title').css({'display':'block',"transition": "0.3s"});
+    //     } else {
+    //         $('.team-quoto').text('Keen runner, cross-country skier and mad about all things tech! Competed already in one ski ultra-marathon and have a trail-running marathon coming up next July in Norway. Been working in startups and tech for the last few years and really want to create something that helps the everyday runner or cyclist get fitter and make new friends!')
+    //         // $('.team-bio .title').css('display', 'none');
+    //         // $(this).parent().children('.title').css({'display':'block',"transition": "0.3s"});
+    //     }
+    // })
     $('.first').mouseover(function () {
         $('.journey-img').attr('src', '/asset/FlatiPhone.svg')
     });

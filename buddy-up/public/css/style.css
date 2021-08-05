@@ -461,32 +461,31 @@ header .header-right > ul > li > a:hover {
   transition: 0.3s;
 }
 .left-pic {
-  width: 125px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  margin-right: 10px;
 }
 .right-pic {
-  width: 125px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   margin-left: 10px;
   margin-top: 15px;
 }
 .center-pic {
-  width: 125px;
-  height: 125px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 .team-pic {
   cursor: pointer;
 }
 .team-bio {
-  width: auto;
+  /* width: auto;
   text-align: center;
   font-weight: 100;
   transition: 0.3s;
-  font-style: normal !important;
+  font-style: normal !important; */
 }
 .team-bio h5 {
   font-weight: bolder !important;
@@ -505,33 +504,47 @@ header .header-right > ul > li > a:hover {
   position: relative;
   top: 100px;
 }
-
+.team-members{
+  height: 200px!important;
+}
 /* team anime css */
 #container {
-  width: 200px;
-  height: 400px;
-  color: #fff;
+  width: 500px;
+  height: auto;
+  color: #000;
+  margin: 0 auto;
   position: relative;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #container div {
-  position: absolute;
-  width: 100px;
-  margin: 10px;
-  background: #ff00ab;
-  padding: 5px;
+   position: absolute;
+ /* margin: 10px auto;
+  background: transparent;
+  padding: 0 15px;
   border-radius: 3px;
   text-align: center;
-  display: inline-block;
+  display: inline-block; */
 }
-#container div:nth-child(1){
-  left: 14.296875px;
+#container div:nth-child(1) { 
+  width: 150px; 
 }
-#container div:nth-child(2){
-  left: 120.09375px;
+#container div:nth-child(2) { 
+  width: 180px; 
 }
-#container div:nth-child(3){
-  left: 224.890625px;
+#container div:nth-child(3) { 
+  width: 150px; 
+}
+.midDiv{
+  z-index: 10;
+}
+.leftDiv{
+  z-index: 9;
+}
+.rightDiv{
+  z-index: 9;
 }
 /* .get-title h1 {
   font-size: 50px;
