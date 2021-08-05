@@ -505,7 +505,13 @@ header .header-right > ul > li > a:hover {
   top: 100px;
 }
 .team-members{
-  height: 200px!important;
+  height: 280px!important;
+}
+.opacity-0{
+  opacity: 0;
+}
+.opacity-100{
+  opacity: 1;
 }
 /* team anime css */
 #container {

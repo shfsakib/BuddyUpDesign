@@ -4,9 +4,9 @@ $(document).ready(function () {
     $('.center-pic').parent().children('.title').css('display', 'block');
 
     var animating = false;
-    $('.leftDiv').css('left','0');
-    $('.midDiv').css('left','auto');
-    $('.rightDiv').css('right','0');
+    $('.leftDiv').css('left', '0');
+    $('.midDiv').css('left', 'auto');
+    $('.rightDiv').css('right', '0');
 
     var leftPos = "0";
     var midPos = "auto";
@@ -18,9 +18,9 @@ $(document).ready(function () {
         if ($(this).hasClass('leftDiv')) {
             $('.leftDiv').css({
                 "left": midPos,
-                "transition":"0.3s"
+                "transition": "0.01s"
 
-            }) 
+            })
             $('.midDiv').animate({
                 "right": rightPos
             }, 600)
@@ -44,14 +44,14 @@ $(document).ready(function () {
             $('.rightDivPos').addClass("leftDiv")
             $('.rightDivPos').removeClass("rightDiv")
             $('.rightDivPos').removeClass("rightDivPos")
-            $(this).css('right','auto');
-            
+            $(this).css('right', 'auto');
+
 
         }
         else if ($(this).hasClass('rightDiv')) {
             $('.rightDiv').css({
                 "left": midPos,
-                "transition":"0.3s"
+                "transition": "0.1s"
             })
             $('.midDiv').animate({
                 "left": leftPos
@@ -59,11 +59,12 @@ $(document).ready(function () {
             $('.leftDiv').animate({
                 "right": rightPos
             }, 600)
-            $('.leftDiv').css('left',''); 
-            $('.rightDiv').css('right',''); 
+            $('.leftDiv').css('left', '');
+            $('.rightDiv').css('right', '');
             //
             $('#container div img').css({ "width": "120px", "height": "120px" })
             $('.rightDiv img').css({ "width": "150px", "height": "150px" })
+
             $('.leftDiv').addClass("leftDivPos")
             $('.midDiv').addClass("midDivPos")
             $('.rightDiv').addClass("rightDivPos")
@@ -78,13 +79,21 @@ $(document).ready(function () {
 
             $('.leftDivPos').addClass("rightDiv")
             $('.leftDivPos').removeClass("leftDiv")
-            $('.leftDivPos').removeClass("rightDivPos")
-            
+            $('.leftDivPos').removeClass("leftDivPos");
 
 
         }
     });
-
+    $('.leftDiv').click(function () {
+        $('.team-quoto').text('Once lockdown stuck and I\'d done several 500 piece puzzles, baked multiple varieties of cookies and had enough quizzes on zoom calls with friends. I realised I should probably go and do some exercise, only I had to do it all alone and there wasn\'t a weight in sight. I\'v always been keen on exercise and as a practicing physio. I\'m keen to get as many people as possible doing more of it.')
+       
+    })
+    $('.midDiv').click(function () {
+        $('.team-quoto').text('Keen runner, cross-country skier and mad about all things tech! Competed already in one ski ultra-marathon and have a trail-running marathon coming up next July in Norway. Been working in startups and tech for the last few years and really want to create something that helps the everyday runner or cyclist get fitter and make new friends!')
+    })
+    $('.rightDiv').click(function () {
+        $('.team-quoto').text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venium, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non priodent.')
+    })
     var round = $('.round-number');
     round.mouseover(function () {
         round.removeClass('active');

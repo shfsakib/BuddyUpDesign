@@ -22,16 +22,19 @@ const Team = () => {
                         <div className="col-12 pt-5 pb-5 d-flex justify-content-center team-members">
                             <div id="container">
                                 <div id="one" className="move leftDiv">
-                                    <img src={'/asset/grp-left.png'} className="left-pic team-pic" />
-
+                                    <img src={'/asset/grp.png'} className="left-pic team-pic" />
+                                   <span className="title"><h4 className="font-weight-bold opacity-0">Joey Hext</h4>
+                                    <h6 className="opacity-0">Co-Founder</h6></span> 
                                 </div>
-                                <div id="two" className="move midDiv">
-                                    <img src={'/asset/grp.png'} className="center-pic team-pic" />
-
+                                <div id="two" className="move midDiv pt-4">
+                                    <img src={'/asset/grp-left.png'} className="center-pic team-pic" />
+                                    <span className="title opacity-1"> <h4 className="font-weight-bold">John Haakon Chen</h4>
+                                    <h6>Co-Founder</h6></span> 
                                 </div>
                                 <div id="three" className="move rightDiv">
-                                    <img src={'/asset/grp-left.png'} className="left-pic team-pic" />
-
+                                    <img src={'/asset/grp.png'} className="left-pic team-pic" />
+                                    <span className="title"><h4 className="font-weight-bold opacity-0">Tom Jerry</h4>
+                                    <h6 className="opacity-0">CTO</h6></span> 
                                 </div>
                             </div>
                         </div>
