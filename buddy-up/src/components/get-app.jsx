@@ -12,7 +12,7 @@ const GetApp = () => {
                         <div className="col-12 col-lg-5 pt-5 pt-lg-0 top-order">
                             <div className="get-title text-center text-lg-right">
                                 <h1 className="text-white font-weight-bolder">Get the <i>BuddyUp</i> now and find your running partner today</h1>
-                                <span className="d-block text-center text-lg-right mt-5">
+                                <span className="d-block text-center text-lg-right mt-1">
                                     <a href="#" className=""><img src={'/asset/appstore.svg'} /></a>
                                     {/* <a href="#"><img src={'/asset/playstore.png'} className="ml-2" /></a> */}
                                 </span>

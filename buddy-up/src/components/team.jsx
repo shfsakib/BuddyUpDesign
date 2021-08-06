@@ -28,8 +28,8 @@ const Team = () => {
                                 </div>
                                 <div id="two" className="move midDiv pt-4">
                                     <img src={'/asset/grp-left.png'} className="center-pic team-pic" />
-                                    <span className="title opacity-1"> <h4 className="font-weight-bold">John Haakon Chen</h4>
-                                    <h6>Co-Founder</h6></span> 
+                                    <span className="title"> <h4 className="font-weight-bold  opacity-1">John Haakon Chen</h4>
+                                    <h6 className="opacity-1">Co-Founder</h6></span> 
                                 </div>
                                 <div id="three" className="move rightDiv">
                                     <img src={'/asset/grp.png'} className="left-pic team-pic" />

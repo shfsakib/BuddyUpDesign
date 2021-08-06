@@ -15,6 +15,14 @@ $(document).ready(function () {
     $('.move').on('click', function () {
         var className = $(this).attr('class')
         console.log(className);
+        $('.move').find('h4').removeClass('opacity-1');
+        $('.move').find('h4').addClass('opacity-0');
+        $('.move').find('h6').removeClass('opacity-1');
+        $('.move').find('h6').addClass('opacity-0');
+        $(this).find('h4').addClass('opacity-1');
+        $(this).find('h4').removeClass('opacity-0');
+        $(this).find('h6').addClass('opacity-1');
+        $(this).find('h6').removeClass('opacity-0');
         if ($(this).hasClass('leftDiv')) {
             $('.leftDiv').css({
                 "left": midPos,
@@ -86,7 +94,7 @@ $(document).ready(function () {
     });
     $('.leftDiv').click(function () {
         $('.team-quoto').text('Once lockdown stuck and I\'d done several 500 piece puzzles, baked multiple varieties of cookies and had enough quizzes on zoom calls with friends. I realised I should probably go and do some exercise, only I had to do it all alone and there wasn\'t a weight in sight. I\'v always been keen on exercise and as a practicing physio. I\'m keen to get as many people as possible doing more of it.')
-       
+
     })
     $('.midDiv').click(function () {
         $('.team-quoto').text('Keen runner, cross-country skier and mad about all things tech! Competed already in one ski ultra-marathon and have a trail-running marathon coming up next July in Norway. Been working in startups and tech for the last few years and really want to create something that helps the everyday runner or cyclist get fitter and make new friends!')
