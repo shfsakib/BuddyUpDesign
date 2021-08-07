@@ -13,9 +13,12 @@ $(document).ready(function () {
     var rightPos = $('.rightDiv').css('right');
     console.log(leftPos, midPos, rightPos);
     window.onresize = function () {
+        $('.leftDiv').css('left', '0')
+        $('.midDiv').css('left', 'auto')
+        $('.rightDiv').css('right', '0')
         leftPos = $('.leftDiv').css('left');
         midPos = $('.midDiv').css('left');
-        rightPos = $('.rightDiv').css('left');
+        rightPos = $('.rightDiv').css('right');
     };
     $('.move').on('click', function () {
         var className = $(this).attr('class')
@@ -32,61 +35,57 @@ $(document).ready(function () {
             $('.leftDiv').animate({
                 "left": midPos,
                 "width": "180px"
-            }, 600)
+            }, 1000)
             $('.midDiv').animate({
-                "right": rightPos,
-                "width": "150px",
-                
-            }, 800)
-            $('.rightDiv').animate({
                 "left": leftPos,
-                "width": "150px",
-            }, 800)
-            $('.midDiv').css('left', '')
+                "width": "150px"
+
+            }, 1000)
+            // $('.rightDiv').animate({
+            //     "left": leftPos
+            // }, 600)
             $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px" })
             $('.leftDiv img').css({ "width": "150px", "height": "150px" })
             $('.leftDiv').addClass("leftDivPos")
             $('.midDiv').addClass("midDivPos")
-            $('.rightDiv').addClass("rightDivPos")
+            // $('.rightDiv').addClass("rightDivPos")
 
             $('.leftDivPos').addClass("midDiv")
             $('.leftDivPos').removeClass("leftDiv")
             $('.leftDivPos').removeClass("leftDivPos")
 
-            $('.midDivPos').addClass("rightDiv")
+            $('.midDivPos').addClass("leftDiv")
             $('.midDivPos').removeClass("midDiv")
             $('.midDivPos').removeClass("midDivPos")
 
-            $('.rightDivPos').addClass("leftDiv")
-            $('.rightDivPos').removeClass("rightDiv")
-            $('.rightDivPos').removeClass("rightDivPos")
+            // $('.rightDivPos').addClass("leftDiv")
+            // $('.rightDivPos').removeClass("rightDiv")
+            // $('.rightDivPos').removeClass("rightDivPos")
             // $(this).css('right', 'auto');
 
+            $('.leftDiv').css({ 'left': '0', 'right': '' })
+            $('.midDiv').css('left', 'auto')
+            $('.rightDiv').css({ 'left': '', 'right': '0' })
 
         }
         else if ($(this).hasClass('rightDiv')) {
-
-            $('.leftDiv').animate({
-                "right": rightPos,
-                "width": "150px"
-            }, 1200)
-            $('.midDiv').animate({
-                "left": leftPos,
-                "width": "150px",
-            }, 800)
             $('.rightDiv').animate({
                 "left": midPos,
                 "width": "180px",
-            }, 800)
+            }, 1000)
+            $('.midDiv').animate({
+                "right": rightPos,
+                "width": "150px"
+            }, 1000)
             // $('.leftDiv').animate({
-            //     "left": leftPos
+            //     "right": rightPos
             // }, 600)
-            // $('.leftDiv').css('left', '');
+            //  $('.leftDiv').css('left', ''); 
             //
             $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px" })
             $('.rightDiv img').css({ "width": "150px", "height": "150px" })
 
-            $('.leftDiv').addClass("leftDivPos")
+            // $('.leftDiv').addClass("leftDivPos")
             $('.midDiv').addClass("midDivPos")
             $('.rightDiv').addClass("rightDivPos")
 
@@ -94,14 +93,20 @@ $(document).ready(function () {
             $('.rightDivPos').removeClass("rightDiv")
             $('.rightDivPos').removeClass("rightDivPos")
 
-            $('.midDivPos').addClass("leftDiv")
+            $('.midDivPos').addClass("rightDiv")
             $('.midDivPos').removeClass("midDiv")
             $('.midDivPos').removeClass("midDivPos")
 
-            $('.leftDivPos').addClass("rightDiv")
-            $('.leftDivPos').removeClass("leftDiv")
-            $('.leftDivPos').removeClass("leftDivPos");
-            $('.rightDiv').css({'left':''},600);
+            // $('.leftDivPos').addClass("rightDiv")
+            // $('.leftDivPos').removeClass("leftDiv")
+            // $('.leftDivPos').removeClass("leftDivPos");
+
+            // $('.leftDiv').css({'left':'0','right':''})
+            // $('.midDiv').css({'left':'auto','right':''})
+            // $('.rightDiv').css({'left':'','right':'0'})  
+            $('.leftDiv').css({ 'left': '0', 'right': '' })
+            $('.midDiv').css({ 'left': '', 'right': '' })
+            $('.rightDiv').css({ 'left': '', 'right': '0' })
         }
     });
     $('.leftDiv').click(function () {
