@@ -7,7 +7,7 @@ const MainDiv = () => {
                     <div className="row pb-lg-4 ml-lg-3 mt-lg-5">
                         <div className="col-lg-7 header-div">
                             <span className="root-title">Find Your Trusted <br />Running <i>Buddy</i></span>
-                            <p className="sub-title">BuddyUp is a matchmaking fitness app for runners to <br />find, like and match with nearby training partners.</p>
+                            <p className="sub-title">BuddyUp is a matchmaking fitness app for runners to  find, like and match with nearby training partners.</p>
                             <div className="row">
                                 <div className="col-12 app-button-div">
                                     <span className="d-flex">

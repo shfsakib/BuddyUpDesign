@@ -20,7 +20,7 @@ const Footer = () => {
                             <hr />
                         </div>
                         <div className="col-12 text-center pb-5">
-                            <p className="color-495057">Copyright &copy; {new Date().getFullYear()} <strong>BuddyUp</strong>. All Rights Reserved</p>
+                            <p className="color-495057 font-14">Copyright &copy; {new Date().getFullYear()} <strong>BuddyUp</strong>. All Rights Reserved</p>
                         </div>
                     </div>
                 </div>

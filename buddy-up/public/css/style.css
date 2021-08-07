@@ -505,7 +505,7 @@ header .header-right > ul > li > a:hover {
   top: 50px;
 }
 .team-members{
-  height: 280px!important;
+  height: 320px!important;
 }
 .opacity-0{
   opacity: 0;
@@ -542,6 +542,9 @@ header .header-right > ul > li > a:hover {
 }
 #container div:nth-child(3) { 
   width: 150px; 
+}
+#container div .title{
+  height: 100px;
 }
 .midDiv{
   z-index: 10;
@@ -602,11 +605,11 @@ header .header-right > ul > li > a:hover {
   }
   .root-title {
     margin-top: 40px !important;
-    font-size: 35px !important;
+    font-size: 30px !important;
   }
   .sub-title {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
   }
   .app-button-div {
     text-align: center !important;
@@ -713,14 +716,20 @@ header .header-right > ul > li > a:hover {
     color: #fff;
     padding: 10px 15px;
     position: absolute;
-    top: 525px;
+    top: 450px;
     border-radius: 5px;
   }
   .benifit-header {
-    font-size: 30px !important;
+    font-size: 25px !important;
+  }
+  .text-center .font-weight-bolder{
+    font-size: 28px;
+  }
+  .color-c1c1c1{
+    font-size: 14px;
   }
   .journey-p {
-    font-size: 18px;
+    font-size: 14px;
     margin: 30px auto;
   }
   .pb-100 {
@@ -743,8 +752,8 @@ header .header-right > ul > li > a:hover {
   }
   .team-quoto {
     margin-left: 35px;
-    line-height: 25px;
-    font-size: 18px;
+    line-height: 25px!important;
+    font-size: 16px!important;
   }
   .top-order {
     order: 1;
@@ -765,9 +774,10 @@ header .header-right > ul > li > a:hover {
     margin: 0 auto;
   }
   .footer-text {
-    font-size: 20px;
+    font-size: 16px;
     margin: 10px auto;
     width: 100% !important;
+    line-height: 30px;
   }
 }
 /* media query end */
@@ -798,4 +808,7 @@ header .header-right > ul > li > a:hover {
 }
 .bg-red {
   background: #ff4438 !important;
+}
+.font-14{
+  font-size: 14px!important;
 }
