@@ -44,7 +44,7 @@ $(document).ready(function () {
             // $('.rightDiv').animate({
             //     "left": leftPos
             // }, 600)
-            $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px" })
+            $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px","transition":"1s" })
             $('.leftDiv img').css({ "width": "150px", "height": "150px" })
             $('.leftDiv').addClass("leftDivPos")
             $('.midDiv').addClass("midDivPos")
@@ -82,7 +82,7 @@ $(document).ready(function () {
             // }, 600)
             //  $('.leftDiv').css('left', ''); 
             //
-            $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px" })
+            $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px","transition":"1s" })
             $('.rightDiv img').css({ "width": "150px", "height": "150px" })
 
             // $('.leftDiv').addClass("leftDivPos")

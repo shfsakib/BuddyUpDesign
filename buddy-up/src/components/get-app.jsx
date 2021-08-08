@@ -10,7 +10,7 @@ const GetApp = () => {
                             <img src="/asset/getbg.png" className="getbg d-lg-block d-none" />
                         </div>
                         <div className="col-12 col-lg-5 pt-5 pt-lg-0 top-order">
-                            <div className="get-title text-center text-lg-right">
+                            <div className="get-title text-center text-lg-right pt-lg-5 pt-3">
                                 <h1 className="text-white font-weight-bolder mt-5">Get the <i>BuddyUp</i> now and find your running partner today</h1>
                                 <span className="d-block text-center text-lg-right mt-1">
                                     <a href="#" className=""><img src={'/asset/appstore.svg'} /></a>
