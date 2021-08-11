@@ -466,7 +466,7 @@ header .header-right > ul > li > a:hover {
   border-radius: 50%;
 }
 .right-pic {
-  width: 100px;
+  width:100px;
   height: 100px;
   border-radius: 50%;
   margin-left: 10px;
@@ -565,7 +565,25 @@ header .header-right > ul > li > a:hover {
   color: #868686;
   width: 75%;
 }
+.benefit-section{
+  background: rgba(255, 0, 0, 0.1);
+}
 /* media query start */
+@media screen and (min-width: 0) and (max-width: 768px) {
+  
+.left-pic {
+  width: 60px;
+  height: 60px; 
+}
+.right-pic {
+  width:60px;
+  height: 60px; 
+}
+.center-pic {
+  width: 100px;
+  height: 100px; 
+}
+}
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .pb-100 {
     padding-bottom: 200px !important;
@@ -758,15 +776,14 @@ header .header-right > ul > li > a:hover {
   .top-order {
     order: 1;
     padding-right: 0 !important;
-  }
+  } 
   .bottom-order {
     order: 2;
     min-height: 500px;
-    background: url("/asset/partner-sm.png");
-    background-size: auto;
+    background: url("/asset/getbg-sm.png");
+    background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 0px;
-    background-position: left;
+    margin-top: 0px; 
   }
   .get-title h1 {
     font-size: 30px;

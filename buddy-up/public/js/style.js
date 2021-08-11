@@ -19,6 +19,13 @@ $(document).ready(function () {
         leftPos = $('.leftDiv').css('left');
         midPos = $('.midDiv').css('left');
         rightPos = $('.rightDiv').css('right');
+        if ($('body').width() < 768) {
+            $('#container div img').css({ "width": "60px", "height": "60px", "margin-top": "40px", "transition": "1s" })
+            $('.midDiv img').css({ "width": "100px", "height": "100px" })
+        } else {
+            $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px", "transition": "1s" })
+            $('.midDiv img').css({ "width": "150px", "height": "150px" })
+        }
     };
     $('.move').on('click', function () {
         var className = $(this).attr('class')
@@ -44,8 +51,17 @@ $(document).ready(function () {
             // $('.rightDiv').animate({
             //     "left": leftPos
             // }, 600)
-            $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px","transition":"1s" })
-            $('.leftDiv img').css({ "width": "150px", "height": "150px" })
+             
+            if ($('body').width() < 768) {
+                $('#container div img').css({ "width": "60px", "height": "60px", "margin-top": "40px", "transition": "1s" })
+                $('.leftDiv img').css({ "width": "100px", "height": "100px" })
+            } else {
+                $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px", "transition": "1s" })
+                $('.leftDiv img').css({ "width": "150px", "height": "150px" })
+            }
+            // $('#container div img').css({ "width": "80px", "height": "80px", "margin-top": "40px", "transition": "1s" })
+            // $('.leftDiv img').css({ "width": "120px", "height": "120px" })
+
             $('.leftDiv').addClass("leftDivPos")
             $('.midDiv').addClass("midDivPos")
             // $('.rightDiv').addClass("rightDivPos")
@@ -82,8 +98,14 @@ $(document).ready(function () {
             // }, 600)
             //  $('.leftDiv').css('left', ''); 
             //
-            $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px","transition":"1s" })
-            $('.rightDiv img').css({ "width": "150px", "height": "150px" })
+            if ($('body').width() < 768) {
+                $('#container div img').css({ "width": "60px", "height": "60px", "margin-top": "40px", "transition": "1s" })
+                $('.rightDiv img').css({ "width": "100px", "height": "100px" })
+            } else {
+                $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px", "transition": "1s" })
+                $('.rightDiv img').css({ "width": "150px", "height": "150px" })
+            }
+
 
             // $('.leftDiv').addClass("leftDivPos")
             $('.midDiv').addClass("midDivPos")

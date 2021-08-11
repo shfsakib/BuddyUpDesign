@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 const FitnessList = () => {
     return (
         <Fragment>
-            <section>
+            <section className="benefit-section">
                 <div className="container">
                     <div className="row p-3">
                         <div className="col-12 p-4 text-center">
