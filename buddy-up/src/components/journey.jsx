@@ -23,7 +23,7 @@ const Journey = () => {
                   <hr className='vr' />
                 </div>
                 <div className='col-8'>
-                  <p className='journey-p h-25'>
+                  <p className='journey-p firstP h-25'>
                     Create your profile, show people who you are don't forget to
                     add workout data.
                   </p>

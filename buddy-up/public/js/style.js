@@ -146,6 +146,7 @@ $(document).ready(function () {
         round.removeClass('active');
         $(this).addClass('active');
     })
+    
     // $('.team-pic').click(function () {
     //     $('.team-pic').css({ "width": "80px", "height": "80px", "margin-top": "15px", "opacity": "0.7", "transition": "0.3s" })
     //     $(this).css({ "width": "125px", "height": "125px", "margin-top": "0px", "opacity": "1", "transition": "0.3s" })
@@ -182,6 +183,32 @@ $(document).ready(function () {
         $('.journey-img').attr('src', '/asset/FlatiPhone2.svg')
         $('.second').addClass('active');
         $(this).removeClass('active');
+    });
+
+
+    $('.firstP').mouseover(function () {
+        $('.journey-img').attr('src', '/asset/FlatiPhone.svg')
+          $('.round-number').removeClass('active');
+        $('.first').addClass('active');
+    });
+    $('.firstP').mouseout(function () {
+        $('.journey-img').attr('src', '/asset/FlatiPhone2.svg')
+        $('.round-number').removeClass('active');
+        $('.second').addClass('active');
+    });
+    $('.secondP').mouseover(function () {
+        $('.journey-img').attr('src', '/asset/FlatiPhone2.svg')
+    });
+
+    $('.thirdP').mouseover(function () {
+        $('.journey-img').attr('src', '/asset/FlatiPhone3.svg')
+        $('.round-number').removeClass('active');
+        $('.third').addClass('active');
+    });
+    $('.thirdP').mouseout(function () {
+        $('.journey-img').attr('src', '/asset/FlatiPhone2.svg')
+        $('.round-number').removeClass('active');
+        $('.second').addClass('active');
     });
     //Menu hamburger animation start
     const menuBtn = document.querySelector('.menu-btn');
