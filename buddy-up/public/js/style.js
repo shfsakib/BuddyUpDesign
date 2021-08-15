@@ -27,109 +27,117 @@ $(document).ready(function () {
             $('.midDiv img').css({ "width": "150px", "height": "150px" })
         }
     };
-    $('.move').on('click', function () {
-        var className = $(this).attr('class')
-        console.log(className);
-        $('.move').find('h4').removeClass('opacity-1');
-        $('.move').find('h4').addClass('opacity-0');
-        $('.move').find('h6').removeClass('opacity-1');
-        $('.move').find('h6').addClass('opacity-0');
-        $(this).find('h4').addClass('opacity-1');
-        $(this).find('h4').removeClass('opacity-0');
-        $(this).find('h6').addClass('opacity-1');
-        $(this).find('h6').removeClass('opacity-0');
-        if ($(this).hasClass('leftDiv')) {
-            $('.leftDiv').animate({
-                "left": midPos,
-                "width": "180px"
-            }, 1000)
-            $('.midDiv').animate({
-                "left": leftPos,
-                "width": "150px"
+    var lock = false;
+    $('.move').on('click', function (e) {
+        if (lock === false) {
+            lock = true;
+            var className = $(this).attr('class')
+            console.log(className);
+            $('.move').find('h4').removeClass('opacity-1');
+            $('.move').find('h4').addClass('opacity-0');
+            $('.move').find('h6').removeClass('opacity-1');
+            $('.move').find('h6').addClass('opacity-0');
+            $(this).find('h4').addClass('opacity-1');
+            $(this).find('h4').removeClass('opacity-0');
+            $(this).find('h6').addClass('opacity-1');
+            $(this).find('h6').removeClass('opacity-0');
+            if ($(this).hasClass('leftDiv')) {
+                $('.leftDiv').animate({
+                    "left": midPos,
+                    "width": "180px"
+                }, 800)
+                $('.midDiv').animate({
+                    "left": leftPos,
+                    "width": "150px"
 
-            }, 1000)
-            // $('.rightDiv').animate({
-            //     "left": leftPos
-            // }, 600)
-             
-            if ($('body').width() < 768) {
-                $('#container div img').css({ "width": "60px", "height": "60px", "margin-top": "40px", "transition": "1s" })
-                $('.leftDiv img').css({ "width": "100px", "height": "100px" })
-            } else {
-                $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px", "transition": "1s" })
-                $('.leftDiv img').css({ "width": "150px", "height": "150px" })
+                }, 800)
+                // $('.rightDiv').animate({
+                //     "left": leftPos
+                // }, 600)
+
+                if ($('body').width() < 768) {
+                    $('#container div img').css({ "width": "60px", "height": "60px", "margin-top": "40px", "transition": "1s" })
+                    $('.leftDiv img').css({ "width": "100px", "height": "100px" })
+                } else {
+                    $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px", "transition": "1s" })
+                    $('.leftDiv img').css({ "width": "150px", "height": "150px" })
+                }
+                // $('#container div img').css({ "width": "80px", "height": "80px", "margin-top": "40px", "transition": "1s" })
+                // $('.leftDiv img').css({ "width": "120px", "height": "120px" })
+
+                $('.leftDiv').addClass("leftDivPos")
+                $('.midDiv').addClass("midDivPos")
+                // $('.rightDiv').addClass("rightDivPos")
+
+                $('.leftDivPos').addClass("midDiv")
+                $('.leftDivPos').removeClass("leftDiv")
+                $('.leftDivPos').removeClass("leftDivPos")
+
+                $('.midDivPos').addClass("leftDiv")
+                $('.midDivPos').removeClass("midDiv")
+                $('.midDivPos').removeClass("midDivPos")
+
+                // $('.rightDivPos').addClass("leftDiv")
+                // $('.rightDivPos').removeClass("rightDiv")
+                // $('.rightDivPos').removeClass("rightDivPos")
+                // $(this).css('right', 'auto');
+
+                $('.leftDiv').css({ 'left': '0', 'right': '' })
+                $('.midDiv').css('left', 'auto')
+                $('.rightDiv').css({ 'left': '', 'right': '0' })
+
             }
-            // $('#container div img').css({ "width": "80px", "height": "80px", "margin-top": "40px", "transition": "1s" })
-            // $('.leftDiv img').css({ "width": "120px", "height": "120px" })
+            else if ($(this).hasClass('rightDiv')) {
+                $('.rightDiv').animate({
+                    "left": midPos,
+                    "width": "180px",
+                }, 800)
+                $('.midDiv').animate({
+                    "right": rightPos,
+                    "width": "150px",
+                }, 800)
+                // $('.leftDiv').animate({
+                //     "right": rightPos
+                // }, 600)
+                //  $('.leftDiv').css('left', ''); 
+                //
+                if ($('body').width() < 768) {
+                    $('#container div img').css({ "width": "60px", "height": "60px", "margin-top": "40px", "transition": "1s" })
+                    $('.rightDiv img').css({ "width": "100px", "height": "100px" })
+                } else {
+                    $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px", "transition": "1s" })
+                    $('.rightDiv img').css({ "width": "150px", "height": "150px" })
+                }
 
-            $('.leftDiv').addClass("leftDivPos")
-            $('.midDiv').addClass("midDivPos")
-            // $('.rightDiv').addClass("rightDivPos")
 
-            $('.leftDivPos').addClass("midDiv")
-            $('.leftDivPos').removeClass("leftDiv")
-            $('.leftDivPos').removeClass("leftDivPos")
+                // $('.leftDiv').addClass("leftDivPos")
+                $('.midDiv').addClass("midDivPos")
+                $('.rightDiv').addClass("rightDivPos")
 
-            $('.midDivPos').addClass("leftDiv")
-            $('.midDivPos').removeClass("midDiv")
-            $('.midDivPos').removeClass("midDivPos")
+                $('.rightDivPos').addClass("midDiv")
+                $('.rightDivPos').removeClass("rightDiv")
+                $('.rightDivPos').removeClass("rightDivPos")
 
-            // $('.rightDivPos').addClass("leftDiv")
-            // $('.rightDivPos').removeClass("rightDiv")
-            // $('.rightDivPos').removeClass("rightDivPos")
-            // $(this).css('right', 'auto');
+                $('.midDivPos').addClass("rightDiv")
+                $('.midDivPos').removeClass("midDiv")
+                $('.midDivPos').removeClass("midDivPos")
 
-            $('.leftDiv').css({ 'left': '0', 'right': '' })
-            $('.midDiv').css('left', 'auto')
-            $('.rightDiv').css({ 'left': '', 'right': '0' })
+                // $('.leftDivPos').addClass("rightDiv")
+                // $('.leftDivPos').removeClass("leftDiv")
+                // $('.leftDivPos').removeClass("leftDivPos");
 
-        }
-        else if ($(this).hasClass('rightDiv')) {
-            $('.rightDiv').animate({
-                "left": midPos,
-                "width": "180px",
-            }, 1000)
-            $('.midDiv').animate({
-                "right": rightPos,
-                "width": "150px"
-            }, 1000)
-            // $('.leftDiv').animate({
-            //     "right": rightPos
-            // }, 600)
-            //  $('.leftDiv').css('left', ''); 
-            //
-            if ($('body').width() < 768) {
-                $('#container div img').css({ "width": "60px", "height": "60px", "margin-top": "40px", "transition": "1s" })
-                $('.rightDiv img').css({ "width": "100px", "height": "100px" })
-            } else {
-                $('#container div img').css({ "width": "100px", "height": "100px", "margin-top": "40px", "transition": "1s" })
-                $('.rightDiv img').css({ "width": "150px", "height": "150px" })
+                // $('.leftDiv').css({'left':'0','right':''})
+                // $('.midDiv').css({'left':'auto','right':''})
+                // $('.rightDiv').css({'left':'','right':'0'})  
+                $('.leftDiv').css({ 'left': '0', 'right': '' })
+                $('.midDiv').css({ 'left': 'auto', 'right': '' })
+                $('.rightDiv').css({ 'left': '', 'right': '0' })
             }
-
-
-            // $('.leftDiv').addClass("leftDivPos")
-            $('.midDiv').addClass("midDivPos")
-            $('.rightDiv').addClass("rightDivPos")
-
-            $('.rightDivPos').addClass("midDiv")
-            $('.rightDivPos').removeClass("rightDiv")
-            $('.rightDivPos').removeClass("rightDivPos")
-
-            $('.midDivPos').addClass("rightDiv")
-            $('.midDivPos').removeClass("midDiv")
-            $('.midDivPos').removeClass("midDivPos")
-
-            // $('.leftDivPos').addClass("rightDiv")
-            // $('.leftDivPos').removeClass("leftDiv")
-            // $('.leftDivPos').removeClass("leftDivPos");
-
-            // $('.leftDiv').css({'left':'0','right':''})
-            // $('.midDiv').css({'left':'auto','right':''})
-            // $('.rightDiv').css({'left':'','right':'0'})  
-            $('.leftDiv').css({ 'left': '0', 'right': '' })
-            $('.midDiv').css({ 'left': '', 'right': '' })
-            $('.rightDiv').css({ 'left': '', 'right': '0' })
+            setTimeout(function () {
+                lock = false;
+            }, 1200);
         }
+
     });
     $('.leftDiv').click(function () {
         $('.team-quoto').text('Once lockdown stuck and I\'d done several 500 piece puzzles, baked multiple varieties of cookies and had enough quizzes on zoom calls with friends. I realised I should probably go and do some exercise, only I had to do it all alone and there wasn\'t a weight in sight. I\'v always been keen on exercise and as a practicing physio. I\'m keen to get as many people as possible doing more of it.')
@@ -146,7 +154,7 @@ $(document).ready(function () {
         round.removeClass('active');
         $(this).addClass('active');
     })
-    
+
     // $('.team-pic').click(function () {
     //     $('.team-pic').css({ "width": "80px", "height": "80px", "margin-top": "15px", "opacity": "0.7", "transition": "0.3s" })
     //     $(this).css({ "width": "125px", "height": "125px", "margin-top": "0px", "opacity": "1", "transition": "0.3s" })
@@ -188,7 +196,7 @@ $(document).ready(function () {
 
     $('.firstP').mouseover(function () {
         $('.journey-img').attr('src', '/asset/FlatiPhone.svg')
-          $('.round-number').removeClass('active');
+        $('.round-number').removeClass('active');
         $('.first').addClass('active');
     });
     $('.firstP').mouseout(function () {
