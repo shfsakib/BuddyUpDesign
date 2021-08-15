@@ -18,7 +18,7 @@ const MainDiv = () => {
                             </div>
                         </div>
                         <div className="col-lg-5 text-center">
-                            <img src={'/asset/iPhone 12 Pro.png'} alt="bg-pic" className="wave-bg" />
+                        <img src={'/asset/hero-mockup.png'} alt="bg-pic" className="wave-bg" />
                         </div>
                     </div>
                 </div>
