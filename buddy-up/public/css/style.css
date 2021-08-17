@@ -274,6 +274,9 @@ header .header-right > ul > li > a:hover {
 .journey-img {
   width: 100%;
 }
+.journeyimg {
+  width: 100%;
+}
 .vr {
   border: none;
   height: 350px;
@@ -437,6 +440,7 @@ header .header-right > ul > li > a:hover {
   margin-right: 0.25em;
   vertical-align: -0.4em;
   margin-top: 25px;
+  width: 100%;
 }
 .open-quoto::before {
   position: absolute;
@@ -587,6 +591,12 @@ header .header-right > ul > li > a:hover {
   .pb-100 {
     padding-bottom: 200px !important;
   }
+  .journeyimg {
+    height: 350px;
+    width: auto;
+    max-width: 400px;
+    margin-top: 40px;
+  }
 }
 @media screen and (min-width: 0) and (max-width: 992px) {
   /*container design change*/
@@ -708,6 +718,12 @@ header .header-right > ul > li > a:hover {
   .journey-img {
     height: 400px;
     width: 100%;
+    margin-top: 40px;
+  }
+  .journeyimg {
+    height: 350px;
+    width: 100%;
+    max-width: 400px;
     margin-top: 40px;
   }
   .round-number-sm {

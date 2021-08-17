@@ -56,8 +56,8 @@ const Journey = () => {
                     <div className='row'>
                       <div className='col-12'>
                         <img
-                          src={'/asset/phone1.svg'}
-                          className='journey-img'
+                          src={'/asset/phone1.png'}
+                          className='journeyimg'
                         />
                       </div>
                       <div className='col-12 text-center'>
@@ -73,8 +73,8 @@ const Journey = () => {
                     <div className='row'>
                       <div className='col-12'>
                         <img
-                          src={'/asset/phone2.svg'}
-                          className='journey-img'
+                          src={'/asset/phone2.png'}
+                          className='journeyimg'
                         />
                       </div>
                       <div className='col-12 text-center'>
@@ -90,8 +90,8 @@ const Journey = () => {
                     <div className='row'>
                       <div className='col-12'>
                         <img
-                          src={'/asset/phone3.svg'}
-                          className='journey-img'
+                          src={'/asset/phone3.png'}
+                          className='journeyimg'
                         />
                       </div>
                       <div className='col-12'>
