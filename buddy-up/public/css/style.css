@@ -24,7 +24,7 @@
   --card-bg: #588de8;
 }
 * {
-  font-family: "Railway", sans-serif;
+  font-family: "Railway", sans-serif!important;
 }
 html,
 body {
