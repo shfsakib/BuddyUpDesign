@@ -31,7 +31,7 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  font-family: "Railway", sans-serif;
+  font-family: "Railway", sans-serif!important;
   overflow-x: hidden;
 }
 .container {
